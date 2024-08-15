@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,27 +8,37 @@
   </head>
   <body>
     <div class="container">
-      <input class="result" id="result" type="text" />
+      <input class="screen" id="result" type="text" />
       <div class="buttons">
-        <button id="multiply" class="orange" data-value="*">*</button>
-        <button id="divide" class="orange" data-value="/">/</button>
-        <button id="subtract" class="orange" data-value="-">-</button>
-        <button id="add" class="orange" data-value="+">+</button>
-        <button data-value="9">9</button>
-        <button data-value="8">8</button>
-        <button data-value="7">7</button>
-        <button data-value="6">6</button>
-        <button data-value="5">5</button>
-        <button data-value="4">4</button>
-        <button data-value="3">3</button>
-        <button data-value="2">2</button>
-        <button data-value="1">1</button>
-        <button data-value="0">0</button>
-        <button data-value=".">.</button>
+        <button class="operators" id="multiply" class="orange" data-value="*">
+          *
+        </button>
+        <button class="operators" id="divide" class="orange" data-value="/">
+          /
+        </button>
+        <button class="operators" id="subtract" class="orange" data-value="-">
+          -
+        </button>
+        <button class="operators" id="add" class="orange" data-value="+">
+          +
+        </button>
+        <button class="numbers">9</button>
+        <button class="numbers">8</button>
+        <button class="numbers">7</button>
+        <button class="numbers">6</button>
+        <button class="numbers">5</button>
+        <button class="numbers">4</button>
+        <button class="numbers">3</button>
+        <button class="numbers">2</button>
+        <button class="numbers">1</button>
+        <button class="numbers">0</button>
+        <button class=" numbers">.</button>
         <button id="equal" class="green" data-value="=">=</button>
         <button id="clear" data-value="c">c</button>
         <button id="del" data-value="Del">Del</button>
-        <button id="percent" class="orange" data-value="%">%</button>
+        <button class="operators" id="percent" class="orange" data-value="%">
+          %
+        </button>
       </div>
     </div>
     <script src="main.js"></script>
