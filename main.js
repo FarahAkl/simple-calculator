@@ -16,7 +16,7 @@ numbers.forEach((number) => {
       screen.value.includes(".") &&
       number.innerText == "." &&
       flagDot == false
-   )
+    )
       return;
     // Clear the display if it shows "Error"
     if (screen.value == "Error") screen.value = "";
@@ -45,7 +45,11 @@ equal.addEventListener("click", () => calcAnswer());
 // Function to evaluate and display the result
 function calcAnswer() {
   try {
-    // Evaluate the current expression and update the display
+    screen.value = screen.value.replace(/(\d+(\.\d+)?)%/g, (match, p1) => {
+      return `${p1} / 100`; // Converts 25% to 25 / 100
+    });
+
+    flagDot = null; // reset the flag null to prevent somethink like that after you hit the = key maybe you enter  10% so the answer will be 0.1 to prevent the use to write 0.1. we should reset the flagDot
     screen.value = eval(screen.value);
   } catch (error) {
     // Show "Error" if the expression is invalid
